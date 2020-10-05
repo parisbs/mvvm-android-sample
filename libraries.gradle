@@ -1,0 +1,74 @@
+ext {
+    // App
+    sdk = [
+        compile: 29,
+        min: 21,
+        target: 29,
+        buildToolsVersion: "29.0.3"
+    ]
+    kotlinVersion = "1.3.72"
+
+    // Android libraries
+    appcompatVersion = "1.1.0"
+    constraintVersion = "1.1.3"
+    ktxVersion = "1.3.0"
+    legacySupportVersion = "1.0.0"
+    lifecycleVersion = "2.2.0"
+    recyclerVersion = "1.1.0"
+    designVersion = "1.0.0-rc01"
+    materialVersion = "1.1.0"
+    coroutinesVersion = "1.3.5"
+
+    // Test
+    coreTestingVersion = "2.0.1"
+    runnerVersion = "1.1.1"
+    espressoVersion = '3.2.0'
+    junitVersion = '4.13'
+    junitExtVersion = '1.1.1'
+
+    // External libraries
+    koinVersion = "2.0.1"
+    uiToolsVersion = "1.0.0-beta01"
+
+    // Implementations
+    libraries = [
+            kotlin: "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion",
+        // Test
+        junit: "junit:junit:${junitVersion}",
+        runner: "androidx.test:runner:${runnerVersion}",
+        espressoCore: "androidx.test.espresso:espresso-core:${espressoVersion}",
+        extJunit: "androidx.test.ext:junit:${junitExtVersion}",
+        extJunitKotlin: "androidx.test.ext:junit-ktx:${junitExtVersion}",
+        espressoIntents: "androidx.test.espresso:espresso-intents:${espressoVersion}",
+            testing: "androidx.arch.core:core-testing:$coreTestingVersion",
+        // Android libraries
+        androidx: [
+            appcompat: "androidx.appcompat:appcompat:${appcompatVersion}",
+            recyclerView: "androidx.recyclerview:recyclerview:${recyclerVersion}",
+            constraintLayout: "androidx.constraintlayout:constraintlayout:${constraintVersion}",
+            ktx: "androidx.core:core-ktx:$ktxVersion",
+            legacy: "androidx.legacy:legacy-support-v4:$legacySupportVersion"
+        ],
+        material       : [
+            material: "com.google.android.material:material:${materialVersion}",
+            design: "com.google.android.material:material:$designVersion"
+        ],
+        coroutines: [
+            core: "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion",
+            android: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion",
+            jdk8: "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:$coroutinesVersion",
+            test: "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
+        ],
+        lifecycle      : [
+            extensions: "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion",
+            compiler: "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion",
+            testing: "androidx.arch.core:core-testing:$lifecycleVersion",
+            ktx: "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+        ],
+        koin           : [
+            core: "org.koin:koin-android:$koinVersion",
+            viewModel: "org.koin:koin-android-viewmodel:$koinVersion"
+        ],
+            uiTools : "com.github.blindoapp:uitools:$uiToolsVersion"
+    ]
+}
