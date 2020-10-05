@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun getToDoById() {
         mainViewModel.getToDoById(
-            mainAdapter.itemCount + 1
+            (mainAdapter.itemCount + 1).toString()
         )
     }
 }
