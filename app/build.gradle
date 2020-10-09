@@ -58,8 +58,8 @@ dependencies {
     implementation libraries.uiTools
 
     // Internal modules
-    implementation project(':data')
-    implementation project(':domain')
+    implementation project(':Data')
+    implementation project(':Domain')
 
     testImplementation libraries.junit
     androidTestImplementation libraries.extJunit
