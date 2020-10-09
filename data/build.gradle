@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.0"
+
+    defaultConfig {
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation libraries.kotlin
+
+    // Import Coroutines
+    implementation libraries.coroutines.core
+
+    // Android core and views dependencies
+    implementation libraries.androidx.ktx
+    implementation libraries.androidx.appcompat
+    implementation libraries.material.material
+    implementation libraries.androidx.constraintLayout
+    implementation libraries.androidx.recyclerView
+    implementation libraries.androidx.legacy
+
+
+    // View models and life data
+    implementation libraries.lifecycle.ktx
+    implementation libraries.lifecycle.extensions
+
+
+}

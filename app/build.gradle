@@ -57,9 +57,8 @@ dependencies {
     // External helpers
     implementation libraries.uiTools
 
-    // Internal modules
-    implementation project(':data')
-    implementation project(':domain')
+    implementation project(":data")
+    implementation project(":domain")
 
     testImplementation libraries.junit
     androidTestImplementation libraries.extJunit

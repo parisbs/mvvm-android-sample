@@ -30,9 +30,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun subscribeToDo() = mainViewModel.toDo.observe(this, Observer {
+    private fun subscribeToDo() = mainViewModel.todo.observe(this, Observer {
         when (val response = it) {
-            is MainViewModel.ToDoStatus.Success -> mainAdapter.addOneItem(response.toDo)
+            is MainViewModel.ToDoStatus.Sucess -> mainAdapter.addOneItem(response.todo)
             is MainViewModel.ToDoStatus.Failure -> Toast.makeText(
                 this,
                 "Nel perro",
